@@ -1,0 +1,32 @@
+{
+  "name": "LeadCapture",
+  "type": "object",
+  "properties": {
+    "email": {
+      "type": "string",
+      "description": "Email address"
+    },
+    "name": {
+      "type": "string",
+      "description": "Name"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "homepage_guide",
+        "funding_quiz",
+        "workshop_signup",
+        "newsletter",
+        "resource_download"
+      ],
+      "description": "Where the lead was captured"
+    },
+    "quiz_results": {
+      "type": "object",
+      "description": "Results from the funding eligibility quiz"
+    }
+  },
+  "required": [
+    "email"
+  ]
+}
