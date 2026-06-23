@@ -1,0 +1,82 @@
+{
+  "name": "ConsultationBooking",
+  "type": "object",
+  "properties": {
+    "parent_name": {
+      "type": "string",
+      "description": "Full name of the parent/caregiver"
+    },
+    "email": {
+      "type": "string",
+      "description": "Contact email"
+    },
+    "phone": {
+      "type": "string",
+      "description": "Contact phone number"
+    },
+    "child_age": {
+      "type": "string",
+      "description": "Age of the child"
+    },
+    "child_name": {
+      "type": "string",
+      "description": "Child's first name"
+    },
+    "primary_concerns": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Primary areas of concern"
+    },
+    "current_supports": {
+      "type": "string",
+      "description": "Current supports or services in place"
+    },
+    "funding_status": {
+      "type": "string",
+      "enum": [
+        "not_applied",
+        "applied_waiting",
+        "receiving_funding",
+        "denied",
+        "unsure"
+      ],
+      "description": "Current funding status"
+    },
+    "consultation_type": {
+      "type": "string",
+      "enum": [
+        "family_navigation",
+        "funding_support",
+        "school_readiness",
+        "general"
+      ],
+      "description": "Type of consultation requested"
+    },
+    "preferred_date": {
+      "type": "string",
+      "format": "date",
+      "description": "Preferred consultation date"
+    },
+    "message": {
+      "type": "string",
+      "description": "Additional message or context"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "new",
+        "contacted",
+        "scheduled",
+        "completed",
+        "cancelled"
+      ],
+      "default": "new"
+    }
+  },
+  "required": [
+    "parent_name",
+    "email"
+  ]
+}
